@@ -1,0 +1,21 @@
+{
+  "name": "blog-api",
+  "version": "1.0.0",
+  "description": "Node.js introprojekt",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimoKaufmann/Nodejs_intro.git"
+  },
+  "author": "Timo Kaufmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimoKaufmann/Nodejs_intro/issues"
+  },
+  "homepage": "https://github.com/TimoKaufmann/Nodejs_intro#readme"
+}
