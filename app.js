@@ -1,5 +1,5 @@
 import http from 'http';
-import { readFile } from 'fs/promises';
+import { readFile,writeFile } from 'fs/promises';
 import path from "path";
 import { fileURLToPath } from 'url';
 
@@ -9,6 +9,16 @@ const __dirname = path.dirname(__filename);
 
 // join the directory name with config.json for configPath
 const configPath = path.join(__dirname, "config.json");
+
+// function to load posts from posts.json
+async function loadPosts() {
+    const data = await readFile(postsPath, "utf-8");
+    return JSON.parse(data)
+}
+
+async function savePosts(posts) {
+    await writeFile(postsPath, JSON.stringify(posts, null, 2), "utf-8");
+}
 
 // use json readFileSync to open and read the file, then parse it as JSON
 const config = JSON.parse(await readFile(configPath, "utf-8"));
